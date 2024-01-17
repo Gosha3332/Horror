@@ -4,8 +4,5 @@ using UnityEngine;
 
 public class DZ : MonoBehaviour
 {
-    public void Object()
-    {
-        Destroy(gameObject);
-    }
+
 }

@@ -4,11 +4,9 @@ using UnityEngine;
 
 public class CameraControl : MonoBehaviour
 {
-    private bool pressed = false;
-    private Vector2 vector;
-    private float sensivity = 3;
-    private float AnglRot;
-    [SerializeField] private Transform cam;
+    [HideInInspector] public bool pressed = false;
+    [HideInInspector] public Vector2 vector;
+    [HideInInspector] private float sensivity = 3;
 
     public void OnPoiterUP() { pressed = false; }
     public void OnPoiterDOWN() { pressed = true; }
@@ -29,16 +27,8 @@ public class CameraControl : MonoBehaviour
             }
         }
     }
-    private void CameraRot()
-    { 
-       AnglRot = Mathf.Clamp(AnglRot - vector.y, -90, 90);
-       cam.localRotation = Quaternion.Euler(AnglRot, 0, 0);
-       transform.Rotate(transform.up, vector.x);
-    }
-
     private void Update()
     {
         Control();
-        if (pressed) { CameraRot(); }
     }
 }

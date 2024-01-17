@@ -5,7 +5,6 @@ using UnityEngine;
 
 public class interaction : MonoBehaviour
 {
-    [SerializeField] private DZ destroy;
     private int domashka;
     public void Arm()
     {
@@ -14,7 +13,7 @@ public class interaction : MonoBehaviour
         {
             if(hit.collider.GetComponent<DZ>())
             {
-                destroy.Object();
+                Destroy(GetComponent<DZ>());
                 domashka++;        
             }
         }
