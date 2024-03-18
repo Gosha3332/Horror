@@ -1,16 +1,18 @@
+using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 [RequireComponent(typeof(CharacterController))]
 
 public class MovePlayer : MonoBehaviour
 {
-    [SerializeField] private Joystick _jk;
+    public Joystick _jk;
     private CharacterController _ch;
     private Vector3 _move;
     [SerializeField] private float _speed = 10f;
-    void Start()
+    private void Start()
     {
         _ch = GetComponent<CharacterController>();
     }
