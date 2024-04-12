@@ -9,7 +9,7 @@ public class Spawn : MonoBehaviour
     [SerializeField] private GameObject Tetrad;
     private void Start()
     {
-        range = Random.Range(0,5);
+        range = Random.Range(0,1);
         if(range >= 1) { Instantiate(Tetrad); }
         Tetrad.transform.position = transform.position;
     }

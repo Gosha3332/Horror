@@ -15,6 +15,6 @@ public class harassment : MonoBehaviour
 
     void Update()
     {
-        if (distance <= 7 ) { _agent.SetDestination(Player.position); }
+        if (distance <= 10 ) { _agent.SetDestination(Player.position); }
     }
 }
